@@ -1,0 +1,232 @@
+html { overflow:hidden;}
+body {margin: 0; padding: 0;}
+h1, h2, h4, h5, h6 {margin-top: 0;}
+ul, ol {margin: 0;}
+p {margin: 0;}
+
+body {
+    height: 100vh;
+    font-family: 'Cuprum', sans-serif;
+    background: #a3b3ff;
+    background: -webkit-linear-gradient(to bottom, #a3b3ff, #324294, #7F7FD5);
+    background: linear-gradient(to bottom, #a3b3ff, #324294, #7F7FD5);
+}
+
+#todo {
+    min-height: 100%;
+    font-family: 'Cuprum', sans-serif;
+    margin: 0 auto;
+    box-shadow: 0 0 1em black;
+    max-width: 400px;
+    background: #f2f4f9;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    background: #02146c;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    font-weight: normal;
+}
+
+.langImg {
+    width: 30px;
+    height: 20px;
+}
+
+#task, #description {
+    font-family: 'Cuprum', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 0.5px;
+    padding-left: 25px;
+    resize: none;
+    border: 3px solid #02146c;
+}
+
+#task:focus, #description:focus {
+    color: #02146c;
+    border: 3px solid #b9c9f1;
+    outline: none;
+}
+
+input[type="date"] {
+    font-family: 'Cuprum', sans-serif;
+    border: 2px solid #02146c;
+    border-radius: 4px;
+    text-align: end
+}
+
+.priorityAllOption {
+    display: inline;
+}
+
+input[type='radio'],
+label {
+    cursor: pointer;
+}
+
+select {
+    font-family: 'Cuprum', sans-serif;
+    border: 2px solid #02146c;
+    border-radius: 4px;
+}
+
+.filter {}
+
+.todo-card-allInfo {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    -webkit-transition: 0.3s;
+    transition: 0.3s linear;
+}
+
+.todo-card-first-row {
+    display: flex;
+    align-items: center
+}
+
+.todo-card-task {
+    margin-right: auto;
+    padding-left: 25px;
+}
+
+.description {
+    padding-left: 10px;
+}
+
+#pagination {
+    display: flex;
+    padding: 0;
+    margin: 10px 0 0 0;
+    list-style-type: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+#pagination li {
+    background-color: #02146c;
+    border: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+#pagination li:hover,
+#pagination li.active {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid #02146c;
+}
+
+button {
+    font-family: 'Cuprum', sans-serif;
+    background-color: #02146c;
+    color: white;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    border-radius: 4px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: auto;
+    display: block;
+    border: 2px solid #02146c;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #02146c;
+
+}
+
+.langBtn {
+    padding: 0;
+    margin: 5px;
+}
+
+.langBtn:hover {
+    background-color: #02146c;
+    padding: 0;
+    margin: 5px;
+}
+
+.saveBtn {
+    display: none;
+}
+
+.themeBtn {
+    margin-left: auto;
+    padding: 0;
+}
+
+.lightThemeBtn {
+    display: none;
+}
+
+.themeBtn:hover {
+    background-color: #02146c;
+}
+
+i {
+    cursor: pointer;
+    margin: 10px;
+}
+
+.fa-moon {
+    color: #9faffb;
+    font-size: 25px;
+}
+
+.fa-pencil-alt,  .fa-trash-alt{
+    color: #02146c;
+}
+
+.low {
+    color: #0bcc15;
+}
+
+.norm {
+    color: #e7eb06;
+}
+
+.high {
+    color: #eb0505;
+}
+
+span {
+    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+    width: 0;
+    padding-left: 20px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s linear;
+}
+
+@media screen and (max-width: 420px) {
+    #todo {
+        width: 100%;
+        height: 100%;
+    }
+
+    .priorityAllOption {
+        display: block;
+    }
+}

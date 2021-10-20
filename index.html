@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="Stylesheet" href="todoLight.css" id="styleTodo">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+        <title>ToDo List</title>
+    </head>
+
+    <body>
+        <div id="todo">
+            <header class="header">
+                <h1 id="title" class="lang">TODO LIST <i id="pencil" class="fas fa-pencil-alt"></i></h1>
+                <button class="langBtn" id="e-lang-en"><img src="enFlag.png" class="langImg"></button>
+                <button class="langBtn" id="e-lang-ru"><img src="ruFlag.png" class="langImg"></button>
+                <button class="themeBtn darkThemeBtn" ><i class="fas fa-moon"></i></button>
+                <button class="themeBtn lightThemeBtn"><i class="fas fa-sun"></i></button>
+            </header>
+
+            <input id="task"  class="lang filter" type="text" placeholder="Task">
+            <input type="hidden" type="text" id="saveIndex" />
+            <textarea id="description"  class="lang filter" placeholder="Description"></textarea>
+            <input type="date" class="dateTask filter">
+            <div class="lang priorityAllOption filter">
+                <input type="radio" id="priorityChoice1" name="priority" class="filter" value="0">
+                <label for="priorityChoice1" id="priorityLow" class="lang filter">Low</label>
+                <input type="radio" id="priorityChoice2" name="priority" class="filter" value="1">
+                <label for="priorityChoice2" id="priorityMedium" class="lang filter">Medium</label>
+                <input type="radio" id="priorityChoice3" name="priority" class="filter" value="2">
+                <label for="priorityChoice3" id="priorityHigh" class="nang filter">High</label>
+            </div>
+
+            <button id="addBtn" class="addBtn lang filter">Add</button>
+            <button id="saveBtn" class="saveBtn lang filter">Save</button>
+            <span id="filter" class="lang">Filter</span>
+            <select name="filterTask">
+                <option style="display:none"></option>
+                <option id="taskFilter" value="task" class="lang">task</option>
+                <option id="descriptionFilter" value="description" class="lang">description</option>
+                <option id="dateFilter" value="date" class="lang">date</option>
+                <option id="priorityFilter" value="priority" class="lang">priority</option>
+            </select>
+
+            <span id="sort" class="lang">Sort</span>
+            <select name="sortTask">
+                <option style="display:none"></option>
+                <option id="dateSort" value="1" class="lang">date</option>
+                <option id="prioritySort" value="2" class="lang">priority</option>
+            </select>
+
+            <button id="resetBtn" class="lang">Reset</button>
+
+            <div id="container"></div>
+            <ul id="pagination"></ul>
+            
+        </div>
+
+        <script src="todo.js"></script>
+    </body>
+
+    </html>
